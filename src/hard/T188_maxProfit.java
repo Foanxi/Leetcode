@@ -1,5 +1,8 @@
 package hard;
 
+/**
+ * @author foanxi
+ */
 public class T188_maxProfit {
     public int maxProfit(int k, int[] prices) {
         // dp[i]表示第j种状态下所剩下的最大现金
