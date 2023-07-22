@@ -33,7 +33,6 @@ public class T8_myAtoi {
     }
 
     public static void main(String[] args) {
-        System.out.println(Integer.MAX_VALUE);
         System.out.println(new T8_myAtoi().myAtoi("123-"));
     }
 }
