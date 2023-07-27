@@ -6,15 +6,11 @@ import common.TreeNode;
  * @author hujinxu
  */
 public class BM31 {
-    TreeNode left;
-    TreeNode right;
 
     public boolean isSymmetrical(TreeNode pRoot) {
         if (pRoot == null) {
             return true;
         }
-        left = pRoot;
-        right = pRoot;
         return traversal(pRoot, pRoot);
     }
 
@@ -28,6 +24,6 @@ public class BM31 {
         if (left.val != right.val) {
             return false;
         }
-        return  traversal(left.left, right.right) & traversal(left.right, right.left);
+        return traversal(left.left, right.right) & traversal(left.right, right.left);
     }
 }
