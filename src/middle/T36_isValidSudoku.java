@@ -7,8 +7,6 @@ import java.util.Set;
 
 /**
  * @author hujinxu
- * @date 2023/7/22
- * @description
  */
 public class T36_isValidSudoku {
     public boolean isValidSudoku(char[][] board) {

@@ -2,8 +2,6 @@ package middle;
 
 /**
  * @author hujinxu
- * @date 2023/7/22
- * @description
  */
 public class T28_strStr {
     public int strStr(String haystack, String needle) {
