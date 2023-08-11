@@ -1,5 +1,8 @@
 package easy;
 
+/**
+ * @author foanxi
+ */
 public class T1281_subtractProductAndSum {
     public int subtractProductAndSum(int n) {
         int sum = 0;
