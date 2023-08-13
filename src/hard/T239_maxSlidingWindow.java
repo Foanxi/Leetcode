@@ -1,5 +1,6 @@
 package hard;
 
+import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
 
@@ -8,6 +9,33 @@ import java.util.LinkedList;
  */
 public class T239_maxSlidingWindow {
     public int[] maxSlidingWindow(int[] nums, int k) {
+        if (k == 0 || k > nums.length) {
+            return new int[]{};
+        }
+        int index = 0;
+        int[] res = new int[nums.length - k + 1];
+        ArrayDeque<Integer> queue = new ArrayDeque<>();
+        for (int i = 0; i < k; i++) {
+            while (!queue.isEmpty() && queue.peekLast() < nums[i]) {
+                queue.pollLast();
+            }
+            queue.add(nums[i]);
+        }
+        res[index++] = queue.peek();
+        for (int j = k; j < nums.length; j++) {
+            if (queue.peek().equals(nums[j - k])) {
+                queue.poll();
+            }
+            while (!queue.isEmpty() && queue.peekLast() < nums[j]) {
+                queue.pollLast();
+            }
+            queue.add(nums[j]);
+            res[index++] = queue.peek();
+        }
+        return res;
+    }
+
+    public int[] maxSlidingWindow2(int[] nums, int k) {
         if (nums.length == 1) {
             return nums;
         }
