@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * @author foanxi
+ */
 public class BM41 {
     public int[] solve(int[] preOrder, int[] inOrder) {
         TreeNode treeNode = reConstructBinaryTree(preOrder, inOrder);

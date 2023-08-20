@@ -2,6 +2,9 @@ package nowcoder;
 
 import common.TreeNode;
 
+/**
+ * @author foanxi
+ */
 public class BM40 {
     public TreeNode reConstructBinaryTree(int[] preOrder, int[] vinOrder) {
         return traversal(preOrder, 0, preOrder.length, vinOrder, 0, vinOrder.length);
