@@ -10,9 +10,9 @@ public class T1140_stoneGameII {
             for (int m = 1; m < piles.length; m++) {
                 if (i + 2 * m > piles.length) {
                     dp[i][m] = sum;
-                }else {
-                    for (int x = 1;x<=2*m;x++){
-                        dp[i][m] = Math.max(dp[i][m],sum - dp[i+x][Math.max(x,m)]);
+                } else {
+                    for (int x = 1; x <= 2 * m; x++) {
+                        dp[i][m] = Math.max(dp[i][m], sum - dp[i + x][Math.max(x, m)]);
                     }
                 }
             }
