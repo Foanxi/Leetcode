@@ -1,5 +1,8 @@
 package offer2;
 
+/**
+ * @author foanxi
+ */
 public class T2 {
     public String addBinary(String a, String b) {
         StringBuilder sb = new StringBuilder();

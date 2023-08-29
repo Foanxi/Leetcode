@@ -1,5 +1,8 @@
 package offer2;
 
+/**
+ * @author foanxi
+ */
 public class T1 {
     public int divide(int a, int b) {
         if (a == Integer.MIN_VALUE && b == -1) {
