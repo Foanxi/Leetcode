@@ -16,10 +16,10 @@ public class T100030_minimumMoves {
         this.extraStones = 0;
         this.moves = 0;
 
-        for (int i = 0; i < grid.length; i++) {
+        for (int[] ints : grid) {
             for (int j = 0; j < grid[0].length; j++) {
-                if (grid[i][j] > 1) {
-                    extraStones += grid[i][j] - 1;
+                if (ints[j] > 1) {
+                    extraStones += ints[j] - 1;
                 }
             }
         }
