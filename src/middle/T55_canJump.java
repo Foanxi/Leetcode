@@ -6,16 +6,23 @@ package middle;
 public class T55_canJump {
     public boolean canJump(int[] nums) {
         int cover = 0;
-        if (nums.length == 1){
+        if (nums.length == 1) {
             return true;
         }
-        for (int i = 0;i<=cover;i++){
-            cover += Math.max(nums[i],cover);
-            if (cover >= nums.length-1){
+        for (int i = 0; i <= cover; i++) {
+            cover = Math.max(nums[i] + i, cover);
+            if (cover >= nums.length - 1) {
                 return true;
             }
         }
         return false;
+    }
+
+    /**
+     * 超时
+     */
+    public boolean canJump2(int[] nums) {
+        return backTracking(nums, 0);
     }
 
     public boolean backTracking(int[] nums, int curIndex) {
