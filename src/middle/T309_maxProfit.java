@@ -1,5 +1,8 @@
 package middle;
 
+/**
+ * @author foanxi
+ */
 public class T309_maxProfit {
     public int maxProfit(int[] prices) {
         // dp[i]表示当前处于第i种状态
@@ -7,7 +10,6 @@ public class T309_maxProfit {
         // 1 表示保持卖出股票的状态，可以是前一天卖出，也可以是冷静期刚结束
         // 2 表示今天卖出股票
         // 3 表示冷冻期
-
         int[] dp = new int[4];
         dp[0] -= prices[0];
 
@@ -19,7 +21,7 @@ public class T309_maxProfit {
             // 对于保持卖出可以是前天卖出，也可以是冷冻期刚结束
             dp[1] = Math.max(dp[1], dp[3]);
             // 对于今天卖出只能是前天持有的情况下卖出
-            dp[2] = temp + prices[i];
+            dp[2] = temp + prices[i - 1];
             // 对于冷冻期，只能是卖出转化而来
             dp[3] = temp2;
         }
