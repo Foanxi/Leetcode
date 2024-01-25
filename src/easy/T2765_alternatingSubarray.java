@@ -1,10 +1,6 @@
 package easy;
 
-/**
- * @author hujinxu
- * @date 2023/7/22
- * @description
- */
+
 public class T2765_alternatingSubarray {
     public int alternatingSubarray(int[] nums) {
         boolean flag;
@@ -32,6 +28,6 @@ public class T2765_alternatingSubarray {
     }
 
     public static void main(String[] args) {
-        System.out.println(new T2765_alternatingSubarray().alternatingSubarray(new int[]{4,5,6}));
+        System.out.println(new T2765_alternatingSubarray().alternatingSubarray(new int[]{4, 5, 6}));
     }
 }
